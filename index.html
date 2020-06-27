@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+    <meta name="description" content="Get live COVID-19 updates using an interactive map.">
+    <meta name="keywords" content="Corona, COVID-19, covid-19, covid, Live Covid-19 updates, Corona-map, Covid-19 map live">
+    <link rel="shortcut icon" href="pp.jpg" type="image/x-icon">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css' rel='stylesheet' />
     <style>
         *{
             margin: 0;
@@ -14,25 +17,34 @@
             width: 100vw;
             height: 100vh;
         }
+        .mapboxgl-popup {
+            max-width: 400px;
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        }
     </style>
-    <title>CodeWithHarry Corona Map</title>
+    <title>Corona Map</title>
 </head>
 <body>
     <div id='map'></div>
-    
 </body>
-
-
-<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
 <script>
-  mapboxgl.accessToken = 'pk.eyJ1IjoiaGFycnkxMjM0OTgiLCJhIjoiY2s4OXh1c3BqMGFsZzNvbXA3YmYyaGFhYSJ9.wmVMiMxlSqpzJPsj-UXr3Q';
-  var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/dark-v10',
-    zoom: 1,
-    center: [0,20]
-  });
-</script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2hpa2hhcjAxIiwiYSI6ImNrYnV1YjdydjA5eXgzMnBkdG45dTM4bngifQ.yzR62vOgeero0o9PsnSo2A';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style:'mapbox://styles/mapbox/dark-v10',
+      zoom: 1.5,
+      center: [0,0]
+    });
 
+    map.addControl(
+new mapboxgl.GeolocateControl({
+positionOptions: {
+enableHighAccuracy: true
+},
+trackUserLocation: true
+})
+);
+  </script>
 <script src="index.js"></script>
 </html>
