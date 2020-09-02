@@ -9,6 +9,7 @@ The map has three coloured markers red, green and yellow.
 
 The website gives the data about the total number of cases, new cases, it also calculates the death rate and the recovery rate and also mentions about when the data was last updated.
 I have used Github pages to deploy the website.
+
 Technologies Used
 
 •	HTML
