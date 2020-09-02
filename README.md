@@ -1,4 +1,4 @@
-In this project, I have created a website that gives information aboutthe spread of COVID-19  all over the world. Website fetches real-time data from a REST API. It uses Mapbox to plot it on a World map
+In this project, I have created a website that gives information about the spread of COVID-19  all over the world. Website fetches real-time data from a REST API. It uses Mapbox to plot it on a World map
 The map has three coloured markers red, green and yellow.
 
 •	Green colour specifies that the number of patients in a country is less than 100
